@@ -1,0 +1,9 @@
+services:
+  cyber-honeycomb:
+    build: .
+    container_name: cyberhoneycomb-demo
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./data_clean:/app/data
+    restart: unless-stopped
